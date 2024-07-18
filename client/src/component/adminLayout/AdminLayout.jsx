@@ -1,6 +1,5 @@
 import React from 'react'
 import LeftNavBar from './LeftNavBar'
-import Services from './Services'
 
 const AdminLayout = () => {
     return (

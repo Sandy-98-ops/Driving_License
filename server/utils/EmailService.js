@@ -48,6 +48,26 @@ export const sendForgotPasswordEmail = (userEmail, userName, password) => {
     });
 };
 
+
+export const sendOTPForLLApply = (userEmail, password) => {
+    const mailOptions = {
+        from: process.env.EMAIL,
+        to: userEmail,
+        subject: 'OTP to Login',
+        text: `Hello,\n\n Below is the OTP. \n\n ${password}.
+        \n\nBest regards,\nRTO`,
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Error sending email:', error);
+        } else {
+            console.log('Email sent:', info.response);
+        }
+    });
+};
+
+
 export const sendCircleOfficerCreationMail = (userEmail, userName, password) => {
     const mailOptions = {
         from: process.env.EMAIL,

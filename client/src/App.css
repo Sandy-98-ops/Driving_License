@@ -89,6 +89,7 @@ background-color: purple;
 /* Form and list container styles */
 .form-1,
 .form-2,
+.form-3
 .list-container {
   /* Adjust width as per your design */
   background-color: white;
@@ -105,9 +106,15 @@ background-color: purple;
 }
 
 .form-2 {
-  width: 100vw;
+  width: 80vw;
   /* Ensure the form takes full width of the container */
 }
+
+.form-3 {
+  width: 50vw;
+}
+
+
 
 
 .list-container {
@@ -589,4 +596,19 @@ h1 {
   color: #333; /* Adjust text color as needed */
   flex-grow: 1; /* Allows the heading to take up remaining space */
   text-align: center; /* Center the heading text */
+}
+
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.scroll-image {
+  max-width: 200px; /* Adjust width as needed */
+  height: auto;
+  margin-right: 10px;
+  flex-shrink: 0;
 }

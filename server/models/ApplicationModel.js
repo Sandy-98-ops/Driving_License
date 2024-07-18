@@ -5,7 +5,9 @@ import mongoose, { Schema } from 'mongoose';
 const applicationModel = new Schema({
 
     applicant: {
-
+        type: Schema.Types.ObjectId,
+        ref: 'Applicant',
+        required: true
     },
     state: {
         type: String
@@ -22,6 +24,9 @@ const applicationModel = new Schema({
     lastName: {
         type: String
     },
+    relation: {
+        type: String
+    },
     relationFirstName: {
         type: String
     },
@@ -29,6 +34,15 @@ const applicationModel = new Schema({
         type: String
     },
     relationLastName: {
+        type: String
+    },
+    aadharNo: {
+        type: String
+    },
+    nprNumber: {
+        type: String
+    },
+    fullName: {
         type: String
     },
     gender: {
@@ -49,10 +63,16 @@ const applicationModel = new Schema({
     bloodGroup: {
         type: String
     },
+    phone: {
+        type: String
+    },
     email: {
         type: String
     },
     mobileNumber: {
+        type: String
+    },
+    emergencyMobileNo: {
         type: String
     },
     identificationMarks_1: {
@@ -119,6 +139,9 @@ const applicationModel = new Schema({
     },
     classOfVehicle: {
         type: [String]
+    },
+    utrNo: {
+        type: String
     }
 
 })

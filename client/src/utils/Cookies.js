@@ -69,7 +69,7 @@ export const useAdminData = () => {
 
 
 
-const staffData = {
+const applicationData = {
     firstName: '',
     lastName: '',
     email: '',
@@ -79,27 +79,27 @@ const staffData = {
     password: ''
 };
 
-export const useStaffData = () => {
-    const [staff, setStaff] = useState(() => {
-        const data = Cookies.get('staffData');
+export const useApplicationData = () => {
+    const [applicationData, setApplicationData] = useState(() => {
+        const data = Cookies.get('applicationData');
         if (data) {
             try {
                 console.log("Got Cookie and returning back")
                 return JSON.parse(data);
             } catch (error) {
                 console.error('Error parsing studentData cookie:', error);
-                return staffData; // Fallback to default if parsing fails
+                return applicationData; // Fallback to default if parsing fails
             }
         }
-        return staffData; // Return default if cookie doesn't exist
+        return applicationData; // Return default if cookie doesn't exist
     });
 
     const updateInstituteData = (newUserData) => {
-        setStaff(newUserData);
-        Cookies.set('staffData', JSON.stringify(newUserData));
+        setApplicationData(newUserData);
+        Cookies.set('applicationData', JSON.stringify(newUserData));
     };
 
-    return { staff, setStaff };
+    return { applicationData, setApplicationData };
 };
 
 

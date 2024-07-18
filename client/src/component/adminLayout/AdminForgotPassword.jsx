@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { studentForgotPassword } from '../../utils/api';
+import { adminForgotPassword } from '../../utils/api';
 import { Alert, Button, Container, Form } from 'react-bootstrap';
 
 const AdminForgotPassword = () => {
@@ -28,7 +28,7 @@ const AdminForgotPassword = () => {
         }
         setLoginErrors({});
         try {
-            const response = await studentForgotPassword(loginData.email);
+            const response = await adminForgotPassword(loginData.email);
 
             if (response.ok) {
                 alert("Password sent to mail")

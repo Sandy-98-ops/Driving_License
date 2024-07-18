@@ -13,13 +13,13 @@ export const create = async (req, res) => {
 
         if (existingUser) {
             return res.status(400)
-                .json({ message: "User already Exists" });
+                .json({ message: "Application already Exists" });
         }
 
         await application.save();
 
         return res.status(200)
-            .json({ message: "User Data saved successfully" })
+            .json(application)
     } catch (error) {
         return res.status(500)
             .json({ message: `Server Error ${error}` })
@@ -62,10 +62,10 @@ export const updateApplicationById = async (req, res) => {
 
         const id = req.params.id;
 
-        const student = req.body;
+        const data = req.body;
 
-        if (student) {
-            await ApplicationModel.findByIdAndUpdate(id, student, { new: true });
+        if (data) {
+            await ApplicationModel.findByIdAndUpdate(id, data, { new: true });
             return res.status(200)
                 .json({ message: "Data Updated Successfully" });
         }

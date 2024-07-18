@@ -15,8 +15,8 @@ const CitizenLeftNavBar = () => {
                 {isCollapsed ? '☰' : '✖'}
             </button>
             <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
-                <NavLink to="/citizen/step1">Apply</NavLink>
-                <NavLink to="/citizen/view">View Application Status</NavLink>
+                <NavLink to="/citizen/applicationForm">Apply</NavLink>
+                <NavLink to="/citizen/applicationStatus">View Application Status</NavLink>
             </div>
             <div className={`content ${isCollapsed ? 'collapsed' : ''}`}>
                 <div className="GuestLayout">

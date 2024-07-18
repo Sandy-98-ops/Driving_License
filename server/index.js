@@ -13,6 +13,7 @@ import userRoute from './route/CitizenRoutes.js';
 import applicationRoute from './route/ApplicationRoute.js';
 import applicantRoute from './route/ApplicantRoute.js';
 import stateRouter from './route/StatesRoute.js';
+import applicantDocumentsRoute from './route/ApplicantDocumentsRoute.js';
 
 
 
@@ -29,6 +30,8 @@ app.use("/admin", adminRoute);
 app.use("/application", applicationRoute);
 app.use("/applicant", applicantRoute);
 app.use("/states", stateRouter)
+app.use("/applicantDocuments", applicantDocumentsRoute);
+
 mongoose.connect(URL).then(() => {
     console.log("DB connected successfully");
     app.listen(PORT, () => {

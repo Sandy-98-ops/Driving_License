@@ -5,10 +5,10 @@ import { createState, getStates, getStateById, updateState, deleteState } from '
 const stateRouter = express.Router();
 
 // Route to create a new state
-stateRouter.post('/states', createState);
+stateRouter.post('/create', createState);
 
 // Route to get all states
-stateRouter.get('/states', getStates);
+stateRouter.get('/', getStates);
 
 // Route to get a single state by ID
 stateRouter.get('/states/:id', getStateById);

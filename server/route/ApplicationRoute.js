@@ -7,6 +7,7 @@ applicationRoute.post('/create', create);
 applicationRoute.get("/", getAllApplications);
 applicationRoute.get("/findById/:id", getApplicationById)
 applicationRoute.put("/updateById/:id", updateApplicationById);
+applicationRoute.put("/update", updateApplicationById);
 applicationRoute.delete("/deleteById/:id", deleteApplicationById);
 
 export default applicationRoute;

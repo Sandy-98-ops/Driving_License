@@ -136,11 +136,36 @@ export const rejectApplication = (id, data) => {
 
 
 
+export const citizenForgotPassword = () => {
+
+}
 
 
+export const adminForgotPassword = () => {
+
+}
+
+export const sendOTPForLLApply = (data) => {
+    return apiRequest('/applicant/create', 'POST', data);
+}
+
+export const verifyOtpAndLogin = (data) => {
+    return apiRequest('/applicant/login', 'POST', data);
+}
 
 
+export const applyForLL = (data) => {
+    return apiRequest('/application/create', 'POST', data)
+}
 
+export const updateLLApplicationById = (data) => {
+    return apiRequest(`/application/update/`, 'PUT', data);
+}
+
+
+export const saveApplicantDocuments = (data) => {
+    return apiRequest('/applicantDocuments/upload', 'POST', data);
+}
 
 // ----------------------------------
 

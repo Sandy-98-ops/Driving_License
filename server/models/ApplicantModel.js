@@ -1,13 +1,8 @@
 import mongoose, { Schema } from "mongoose";
 
 const applicantModel = new Schema({
-    name: {
-        type: String
-    },
+
     email: {
-        type: String
-    },
-    phone: {
         type: String
     },
     otp: {

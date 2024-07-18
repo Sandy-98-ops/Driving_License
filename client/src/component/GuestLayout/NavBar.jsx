@@ -17,15 +17,15 @@ const NavBar = () => {
             <Nav className='me-auto'>
               <Nav.Link as={NavLink} to='/home'>Home</Nav.Link>
               <Nav.Link as={NavLink} to='/about'>About</Nav.Link>
-              <Nav.Link as={NavLink} to='/signUp'>Signup</Nav.Link>
+              {/* <Nav.Link as={NavLink} to='/signUp'>Signup</Nav.Link> */}
 
               <NavDropdown title="Login" id="collasible-nav-dropdown">
-                <NavDropdown.Item as={NavLink} to="/guestLayout/Login">Login</NavDropdown.Item>
+                {/* <NavDropdown.Item as={NavLink} to="/guestLayout/Login">Login</NavDropdown.Item> */}
                 <NavDropdown.Item as={NavLink} to="/guestLayout/adminlogin">Admin Login</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/guestLayout/staffLogin">Staff Login</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/guestLayout/circleOfficerLogin">Circle Officer Login</NavDropdown.Item>
+                {/* <NavDropdown.Item as={NavLink} to="/guestLayout/staffLogin">Staff Login</NavDropdown.Item> */}
+                {/* <NavDropdown.Item as={NavLink} to="/guestLayout/circleOfficerLogin">Circle Officer Login</NavDropdown.Item> */}
               </NavDropdown>
-              <Nav.Link as={NavLink} to='/schemes'>Schemes</Nav.Link>
+              {/* <Nav.Link as={NavLink} to='/schemes'>Schemes</Nav.Link> */}
 
             </Nav>
           </Navbar.Collapse>
